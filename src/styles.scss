@@ -22,3 +22,16 @@
 .p-panel .p-panel-content {
   border-color: var(--bluegray-500) !important;
 }
+
+input {
+  // width: 80px;
+  height: 42px;
+}
+
+button {
+  width: 80px;
+  height: 40px;
+}
+.p-button {
+  padding: 4px 6px;
+}

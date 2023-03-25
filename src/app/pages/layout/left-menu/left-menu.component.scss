@@ -1,0 +1,21 @@
+// :host {
+//   class="col-12 col-md-3 col-xl-2 bd-sidebar"
+// }
+
+.sidebar-menu {
+  flex: 0 1 320px;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+  z-index: 1000;
+  height: calc(100vh - 4rem);
+}
+
+//  @media (min-width: 1200px)
+//   max-width: 16.666667%;
+
+// @media (min-width: 768px)
+// .sidebar-menu  {
+// border-right: 1px solid rgba(0,0,0,.1);
+// }

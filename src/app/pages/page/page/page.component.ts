@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-layout-column',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class PageComponent {
 
+
+  showComponentsList: any
+  components$ = Observable<any>;
+  hideComponentsList() { }
 }

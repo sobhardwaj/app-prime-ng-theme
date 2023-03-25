@@ -1,13 +1,9 @@
-<!-- <p>header works!</p> -->
-<!-- <input class="" type="search" pInputText />
-<textarea rows="5" cols="30" pInputTextarea></textarea> -->
-<!-- <button pButton pRipple label="Submit" class="p-button-success">add</button> -->
-
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand">Company</a>
   <form class="d-flex gap-3 me-2">
-    <input class="" type="search" pInputText placeholder="Search" name="gloablSearch" aria-label="Search"
-      [(ngModel)]="gloablSearch" />
+    <input #componentSearch pInputText type="search" placeholder="Components search (/)" aria-label="Search"
+      [(ngModel)]="gloablSearch" name="gloablSearch" (focus)="showComponentList()" (click)="showComponentList()"
+      (input)="onSearchChange($event)" (keyup.enter)="navigateToComponent()" />
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
 </nav>

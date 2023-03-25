@@ -11,4 +11,10 @@ export class HeaderComponent {
   constructor() {
     console.log(this.gloablSearch)
   }
+
+  showComponentList() { }
+
+  onSearchChange(event: any) { }
+
+  navigateToComponent() { }
 }

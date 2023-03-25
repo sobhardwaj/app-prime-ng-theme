@@ -3,3 +3,22 @@
 @import "primeicons/primeicons.css";
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "/src/app/theme/custom_theme/custom_theme.scss";
+
+// $teal-50: #483288;
+
+.p-panel {
+  margin: 6px;
+  width: 600px;
+  border: 1px solid var(--bluegray-500);
+  .p-panel-header {
+    background-color: var(--bluegray-500) !important;
+    border-color: var(--bluegray-500) !important;
+    color: #ffffff;
+  }
+}
+
+.p-panel .p-panel-content {
+  border-color: var(--bluegray-500) !important;
+}

@@ -13,12 +13,12 @@ import { ListboxModule } from 'primeng/listbox'
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 // import { EditorModule } from 'primeng/editor'
 import { CardModule } from 'primeng/card'
-import { RadioButtonModule } from "primeng/radiobutton";
+import { RadioButtonModule } from "primeng/radiobutton"
 import { TabViewModule } from 'primeng/tabview'
 
-import { FocusTrapModule } from 'primeng/focustrap';
-import { TreeTableModule } from 'primeng/treetable';
-import { TreeModule } from 'primeng/tree';
+import { FocusTrapModule } from 'primeng/focustrap'
+import { TreeTableModule } from 'primeng/treetable'
+import { TreeModule } from 'primeng/tree'
 
 import { CalendarModule } from "primeng/calendar"
 import { DropdownModule } from 'primeng/dropdown'
@@ -61,8 +61,10 @@ import { InputSwitchModule } from 'primeng/inputswitch'
 import { InputTextModule } from 'primeng/inputtext'
 import { InputTextareaModule } from 'primeng/inputtextarea'
 
-
-import { SharedModule, Header, Footer } from 'primeng/api';
+import { DividerModule } from 'primeng/divider'
+import { PanelMenuModule } from "primeng/panelmenu"
+import { TabMenuModule } from 'primeng/tabmenu'
+import { SharedModule, Header, Footer } from 'primeng/api'
 
 // import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 // import { MatchHeightDirective } from './directives/match-height.directive';
@@ -112,6 +114,7 @@ export const APP_PRIMENG_MODULE = [
   DragDropModule,
   DropdownModule,
   DataViewModule,
+  DividerModule,
   FileUploadModule,
   FocusTrapModule,
   InputSwitchModule,
@@ -124,6 +127,7 @@ export const APP_PRIMENG_MODULE = [
   MegaMenuModule,
   MenuModule,
   MenubarModule,
+  PanelMenuModule,
 
   TerminalModule,
   TableModule,
@@ -138,6 +142,7 @@ export const APP_PRIMENG_MODULE = [
   TabViewModule,
   ToolbarModule,
   PanelModule,
+  TabMenuModule,
 
   RadioButtonModule,
 
@@ -179,6 +184,7 @@ export const APP_PRIMENG_MODULE = [
     DragDropModule,
     DropdownModule,
     DataViewModule,
+    DividerModule,
     FileUploadModule,
     FocusTrapModule,
     InputSwitchModule,
@@ -191,6 +197,8 @@ export const APP_PRIMENG_MODULE = [
     MegaMenuModule,
     MenuModule,
     MenubarModule,
+    PanelMenuModule,
+    TabMenuModule,
 
     TerminalModule,
     TableModule,
@@ -254,6 +262,8 @@ export const APP_PRIMENG_MODULE = [
     MegaMenuModule,
     MenuModule,
     MenubarModule,
+    PanelMenuModule,
+    TabMenuModule,
 
     TerminalModule,
     TableModule,

@@ -1,0 +1,90 @@
+<div class="user-comp">
+  <div class="d-flex align-items-center justify-content-between mb-2">
+    <h5>User Module</h5>
+    <p-checkbox [disabled]="false" [(ngModel)]="checkedUser"></p-checkbox>
+
+    <!-- <i class="pi pi-search"></i> -->
+    <input type="text" pInputText size="50" placeholder="Search keyword" name="searchUser" [(ngModel)]="searchUser"
+      (input)="filterGlobal()" style="width:auto">
+
+
+  </div>
+  <p-table #userTable [value]="productData.products" [rows]="10" [paginator]="true" sortMode="multiple"
+    responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{'min-width': '50rem'}" selectionMode="multiple"
+    [(selection)]="selectedUser"
+    [globalFilterFields]="['id', 'title', 'category','description' , 'price', 'rating', 'stock', 'brand']"
+    [rowHover]="true" [style]="{ width: '100%' }" dataKey="id">
+    <ng-template pTemplate="caption">
+      <div class="ui-helper-clearfix" style="text-align: left">
+        <button type="button" pButton icon="pi pi-file" iconPos="left" label="CSV" (click)="userTable.exportCSV()"
+          style="margin-right: 0.5em;"></button>
+        <button type="button" pButton icon="pi pi-file-excel" iconPos="left" label="EXCEL" (click)="exportExcel()"
+          style="margin-right: 0.5em;" class="ui-button-success"></button>
+        <button type="button" pButton icon="pi pi-file-pdf" iconPos="left" label="PDF" (click)="exportPdf()"
+          class="ui-button-warning"></button>
+        <button type="button" pButton icon="pi pi-file" iconPos="left" label="CSV - Selection Only"
+          (click)="userTable.exportCSV({selectionOnly:true})" style="float:right"></button>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <!-- Custom Filter-->
+
+        <th class="headerItem" [pSortableColumn]="'id'">ID
+          <p-sortIcon [field]="'id'"></p-sortIcon>
+        </th>
+        <!-- <th>
+          <p-dropdown [options]="days" (onChange)="userTable.filter($event.value, 'departDay', 'equals')"
+            styleClass="p-column-filter" placeholder="Select Day" [showClear]="true">
+            <ng-template let-option pTemplate="item">
+              <span [class]="'customer-badge status-' + option.value">{{option.label}}</span>
+            </ng-template>
+          </p-dropdown>
+        </th> -->
+        <th class="headerItem" [pSortableColumn]="'title'">Title
+          <p-sortIcon [field]="'title'"></p-sortIcon>
+        </th>
+        <th class="headerItem">Category</th>
+        <th class="headerItem">Description</th>
+        <th class="headerItem" [pSortableColumn]="'price'">Price
+          <p-sortIcon [field]="'price'"></p-sortIcon>
+        </th>
+        <th class="headerItem">Discount Percentage</th>
+        <th class="headerItem" [pSortableColumn]="'rating'">Rating
+          <p-sortIcon [field]="'rating'"></p-sortIcon>
+        </th>
+        <th class="headerItem" [pSortableColumn]="'stock'">Stock <p-sortIcon [field]="'stock'"></p-sortIcon></th>
+        <th class="headerItem" [pSortableColumn]="'brand'">Brand <p-sortIcon [field]="'brand'"></p-sortIcon></th>
+
+        <!-- <td class="headerItem">Stock</td> -->
+        <th class="headerItem">Image</th>
+        <!-- <td></td> -->
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product let-rowIndex="rowIndex" let-columns="columns">
+      <tr [pSelectableRow]="product">
+        <td>
+          <p-tableCheckbox [value]="product"></p-tableCheckbox>
+        </td>
+        <td>{{ product.id }}</td>
+        <td> <span class="badge-tab">{{product.title}}</span></td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.discountPercentage }}</td>
+        <td>{{ product.rating }}</td>
+        <td>{{ product.stock }}</td>
+        <td> <span> <img [src]="product.thumbnail" alt="" width="35px" height="35px"></span></td>
+
+
+        <!-- <td *ngFor="let day of user.days">{{ day.hoursLogged }}</td> -->
+        <!-- <td>{{ totalHours }}</td> -->
+      </tr>
+    </ng-template>
+    <!-- <ng-template pTemplate="summary">
+      <div style="text-align: left">
+        selected demo
+      </div>
+    </ng-template> -->
+  </p-table>
+</div>

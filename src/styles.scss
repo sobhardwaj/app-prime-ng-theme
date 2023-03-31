@@ -8,6 +8,10 @@
 
 // $teal-50: #483288;
 
+body {
+  background-color: #e9ecef !important;
+  font-family: Roboto, sans-serif !important;
+}
 .p-panel {
   margin: 6px;
   width: 600px;
@@ -19,19 +23,109 @@
   }
 }
 
+.p-hidden-accessible {
+  display: none;
+}
+.p-dropdown {
+  width: 14rem;
+}
+.p-dropdown .p-inputtext {
+  border: 0 none;
+  padding: 8px;
+}
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+  margin: 0;
+  padding: 8px;
+  border: 0 none;
+  color: rgba(0, 0, 0, 0.87);
+  background: transparent;
+  transition: none;
+  border-radius: 0;
+}
+
 .p-panel .p-panel-content {
   border-color: var(--bluegray-500) !important;
 }
 
-input {
-  // width: 80px;
-  height: 42px;
+// input {
+//   // width: 80px;
+//   height: 42px;
+// }
+
+// button {
+//   width: 80px;
+//   height: 40px;
+// }
+// .p-button {
+//   padding: 4px 6px;
+// }
+
+.p-megamenu {
+  padding: 1rem;
+  background: #dee2e6;
+  color: rgba(0, 0, 0, 0.87);
+  /* border: 1px solid #dee2e6; */
+  height: 100vh;
+  border-radius: 4px;
 }
 
-button {
-  width: 80px;
-  height: 40px;
+.p-megamenu-root-list > .p-menuitem {
+  position: relative;
+  width: 100%;
 }
-.p-button {
-  padding: 4px 6px;
+
+.p-paginator .p-paginator-pages .p-paginator-page {
+  background-color: transparent;
+  border: 0 none;
+  color: rgba(0, 0, 0, 0.6);
+  width: 3rem;
+  height: 3rem;
+  margin: 0.143rem;
+  transition: none;
+  border-radius: 50%;
+}
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-prev,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-last {
+  background-color: transparent;
+  border: 0 none;
+  color: rgba(0, 0, 0, 0.6);
+  width: 3rem;
+  height: 3rem;
+  margin: 0.143rem;
+  transition: none;
+  border-radius: 50%;
+}
+
+// .p-datatable {
+// }
+
+// table {
+//   table-layout: fixed;
+// }
+// td,
+// th {
+//   padding: 6px;
+//   overflow: hidden;
+//   white-space: nowrap;
+// }
+.p-datatable .p-datatable-tbody > tr > td {
+  text-align: left;
+  border: 1px solid #e4e4e4;
+  border-width: 0 0 1px 0;
+  padding: 4px 8px;
+}
+
+.p-datatable .p-datatable-thead > tr > th,
+.p-datatable .p-datatable-tbody > tr > td {
+  white-space: nowrap;
+}
+.p-datatable .p-datatable-header {
+  background: #f8f9fa;
+  color: #343a40;
+  border: 1px solid #dee2e6;
+  border-width: 1px 0 1px 0;
+  padding: 1rem 1rem;
+  font-weight: 700;
 }

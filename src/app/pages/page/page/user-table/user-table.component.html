@@ -1,7 +1,7 @@
 <div class="user-comp">
   <div class="d-flex align-items-center justify-content-between mb-2">
     <h5>User Module</h5>
-    <p-checkbox [disabled]="false" [(ngModel)]="checkedUser"></p-checkbox>
+    <!-- <p-checkbox [disabled]="false" [(ngModel)]="checkedUser"></p-checkbox> -->
 
     <!-- <i class="pi pi-search"></i> -->
     <input type="text" pInputText size="50" placeholder="Search keyword" name="searchUser" [(ngModel)]="searchUser"
@@ -16,12 +16,13 @@
     [rowHover]="true" [style]="{ width: '100%' }" dataKey="id">
     <ng-template pTemplate="caption">
       <div class="ui-helper-clearfix" style="text-align: left">
+
         <button type="button" pButton icon="pi pi-file" iconPos="left" label="CSV" (click)="userTable.exportCSV()"
-          style="margin-right: 0.5em;"></button>
+          style="margin-right: 0.5em;" styleClass="p-button-sm"></button>
         <button type="button" pButton icon="pi pi-file-excel" iconPos="left" label="EXCEL" (click)="exportExcel()"
-          style="margin-right: 0.5em;" class="ui-button-success"></button>
+          style="margin-right: 0.5em;" styleClass="p-button-sm"></button>
         <button type="button" pButton icon="pi pi-file-pdf" iconPos="left" label="PDF" (click)="exportPdf()"
-          class="ui-button-warning"></button>
+          styleClass="p-button-sm"></button>
         <button type="button" pButton icon="pi pi-file" iconPos="left" label="CSV - Selection Only"
           (click)="userTable.exportCSV({selectionOnly:true})" style="float:right"></button>
       </div>

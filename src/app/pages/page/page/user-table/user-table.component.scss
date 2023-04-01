@@ -13,5 +13,10 @@
 .user-comp {
   padding: 10px;
   margin: 10px;
-  max-width: 80%;
+  // max-width: 80%;
+}
+:host {
+  padding: 16px;
+  // background: white;
+  // width: 100%;
 }
